@@ -4,6 +4,7 @@
     --font-parraf: 'Open Sans', sans-serif;
 /* color palette */
     --first-color: #784D3C;
+    --grey: #e1e1e1;
     --white: #FFFFFF;
     --black: #000000;
 }
@@ -24,10 +25,11 @@ body {
 
 /* Globals */
 
-.contenedor {
+.content {
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
+    width: min(90% 120rem);
 }
 
 a {
@@ -36,6 +38,7 @@ a {
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
+    line-height: 1.2;
 }
 h1 {
     font-size: 4.8rem;
@@ -85,12 +88,17 @@ img {
         margin-top: 15rem;
     }
 }
+.barra {
+    padding-top: 4rem;
+    padding-right: 3rem;
+}
 
 @media (min-width: 768px) {
     .barra {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+
     }
 }
 .logo {
@@ -115,3 +123,99 @@ img {
         font-size: 1.8rem;
         color: var(--white);
     }
+
+    @media (min-width: 768px) {
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 5rem;
+        }
+        .entry {
+            border-bottom: 1px solid var(--grey);
+            margin-bottom: 2rem;
+        }
+        
+
+    .entry :last-of-type {
+        border: none;
+        margin-bottom: 0;
+    }
+    }
+
+
+    .botton {
+        display: block;
+        font-family: var(--font-heading);
+        color: var(--white);
+        text-align: center;
+        padding: 1rem 3rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+@media (min-width: 768px) {
+    .botton {
+        display: inline-block;
+
+    }
+}
+.main--botton {
+        background-color: var(--black);
+    }
+
+.second--botton {
+    background-color: var(--first-color);
+
+}
+
+.cources {
+    list-style: none;
+}
+
+.widget-cource {
+    border-bottom: 1px solid var(--grey);
+    margin-bottom: 2rem;
+}
+.widget-cource:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.widget-cource__label {
+    font-family: var(--font-heading);
+    font-weight: bold;
+}
+
+.widget-cource__info {
+    font-weight: normal;
+}
+
+.widget-cource__info,
+.widget-cource__label {
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--black);
+    padding-bottom: 4rem;
+    padding-right: 3rem;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    /* using flexbox
+    .about-us {
+        display: flex;
+        justify-content: space-betwen ;
+    }
+    .about-us__text,
+    .about-us__image {
+        flex-basis: calc(50% -1rem);}
+
+    } */
+    .about-us {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        column-gap: 2rem;
+    }
+}
