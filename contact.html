@@ -34,24 +34,39 @@
 
     <main class="content">
     <!-- Contenedor principal -->
-        <h3 class="text-center"> About Us</h3>
+        <h3 class="text-center">Contact</h3>
 
-        <div class="about-us">
-            <div class="about-us__img">
-                <img src="img/nosotros.jpg" alt="about us photo">
+        <div class="contact__bg"></div>
+
+        <form action="" class="form">
+            <div class="field">
+                <label class="field__lb" for="input__name">Name</label>
+                <input class="field__label" 
+                    id="input__name" 
+                    type="text" 
+                    placeholder="Your Name"
+                >                
             </div>
-            <div class="about-us__text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Velit vel accusantium ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit vel accusantium ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit vel accusantium animi voluptatibus magni 
-                    iure, laboriosam, repe</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit vel accusantiuipsum dolor sit amet consectetur adipisicing elit.
-                    Velit vel accusantiumanimi voluptatibus magni iure, 
-                    laboriosam, repe</p>
+            <div class="field">
+                <label class="field__lb" for="input__email">Mail</label>
+                <input class="field__label" 
+                    id="input__email" 
+                    type="email" 
+                    placeholder="Your email"
+                >                
             </div>
-        </div>
+            <div class="field">
+                <label class="field__lb" for="input__message">Message</label>
+                <textarea 
+                class="field__label field__label--txt"
+                    id="input__message"
+                ></textarea>
+            </div>
+            <div class="field">
+                <input type="submit" value="send" class="botton main--botton">
+            </div>
+        </form>
+        
     </main>
     <!-- Footer -->
     <footer class="footer">
